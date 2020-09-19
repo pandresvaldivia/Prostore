@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="HTML, CSS, JavaScript. OOP, modules" />
+        <meta name="author" content="Pablo Andres Valdivia Cuzcano" />
+        <meta name="description" content="The place where you can store your products - OOP Project" />
+        <link rel="shorcut icon" href="assets/shopping-cart-light.svg" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <title>Prostore</title>
+    </head>
+    <body>
+        <header>
+            <nav class="light-blue darken-4">
+                <a href="./index.html" class="appName"><img style="margin-right: 10px" src="assets/shopping-cart-light.svg" alt="" /><span>Prostore</span></a>
+                <div>
+                    <a target="_blank" href="https://twitter.com/PabloAndresValC"><img src="assets/twitter.svg" /></a>
+                    <a target="_blank" href="https://github.com/pandresvaldivia"><img src="assets/github.svg" /></a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="row">
+            <div id="form-container" class="col s12 m4">
+                <div class="card blue-grey">
+                    <div class="card-content white-text">
+                        <span class="card-title">New product</span>
+                        <div class="row">
+                            <form id="productForm" class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="product-name" type="text" class="validate" required="required" />
+                                        <label for="product-name">Product name</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="price" type="text" class="validate" required="required" />
+                                        <label for="price">Price</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="date" type="date" required="required" />
+                                        <label for="date">Date</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <submit class="btn waves-effect waves-ligh col s10 offset-s1 addBtn" type="submit" name="action"
+                                        ><img src="assets/add.svg" style="height: 60%" alt="" /> Add
+                                    </submit>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m8">
+                <ul id="product-collection" class="collection with-header">
+                    <li class="collection-header" style="display: flex; align-items: center; justify-content: space-between">
+                        <h4>My products</h4>
+                    </li>
+                    <table class="centered highlight">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Date</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="product-list"></tbody>
+                    </table>
+                </ul>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="js/main.js" type="module"></script>
+    </body>
+</html>
